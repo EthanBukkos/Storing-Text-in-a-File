@@ -7,19 +7,17 @@ public class ListWriter
 	{
 		File outputFile = new File("list.txt");
 		PrintWriter pw = new PrintWriter(outputFile);
-		Scanner scan1 = new Scanner(System.in);
-		Scanner scan2 = new Scanner(System.in);
-		Scanner scan3 = new Scanner (System.in);
+		Scanner scan = new Scanner(System.in);
 		int capacity;
 		String object = "";
 		
 		System.out.print("How many objects would you like to store? : ");
-		capacity = scan1.nextInt();
+		capacity = scan.nextInt();
 		
 		while(capacity < 1)
 		{
 			System.out.print("Enter a value greater than 0: ");
-			capacity = scan1.nextInt();
+			capacity = scan.nextInt();
 		}
 		pw.println(capacity);
 		
