@@ -21,7 +21,7 @@ public class ListWriter
 			System.out.print("Enter a value greater than 0: ");
 			capacity = scan1.nextInt();
 		}
-		pw.println(cap);
+		pw.println(capacity);
 		
 		for (int i = 1; i <= capacity; i++) {
 			System.out.println("Enter an object: ");
