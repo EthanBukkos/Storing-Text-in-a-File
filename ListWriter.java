@@ -14,7 +14,7 @@ public class ListWriter
 		String object = "";
 		
 		System.out.print("How many objects would you like to store? : ");
-		cap = scan1.nextInt();
+		capacity = scan1.nextInt();
 		
 		while(capacity < 1)
 		{
