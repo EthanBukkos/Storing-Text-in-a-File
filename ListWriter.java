@@ -5,10 +5,20 @@ public class ListWriter
 {
 	private int capacity; 
 	
+	public static void main (String [] args) throws IOException
+	{
+		ListWriter list = new ListWriter();
+		
+		list.WriteList();
+		
+	}
+
+	
 	public void WriteList () throws IOException
 	{
 		File outputFile = new File("list.txt");
 		PrintWriter pw = new PrintWriter(outputFile);
+		capacity = 0;
 		Scanner scanCapacity = new Scanner(System.in);
 		Scanner scanObject = new Scanner(System.in);
 		String object = "";
@@ -23,15 +33,20 @@ public class ListWriter
 			{
 				capacity = scanCapacity.nextInt();
 			
-				while(capacity < 1)
+				if (capacity < 1)
+				{
+					
+					System.out.print("Enter a value greater than 0: ");
+                
+				} 
+				
+				else
 				{
 					done = true;
-					System.out.print("Enter a value greater than 0: ");
-					capacity = scanCapacity.nextInt();
-				}
 			
 				pw.println("# of Items: " + capacity);
-			}
+				}
+			}	
 		
 			catch (InputMismatchException  ime )
 			{	
@@ -47,6 +62,6 @@ public class ListWriter
 			object = scanObject.nextLine();
 			pw.println(object);
 		}
-			pw.close();	
-	}
-}
+			pw.close();
+		
+}}
