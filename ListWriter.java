@@ -1,3 +1,6 @@
+//ListWriter.java
+//This program creates a .txt file and stores text in that file based on what the user inputs
+
 import java.util.*;
 import java.io.*;
 
