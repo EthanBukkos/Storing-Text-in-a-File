@@ -11,7 +11,7 @@ public class AZSortFromFile {
         ArrayList<String> items = readItemsFromFile("list.txt");
 
         if (items != null) {
-            Collections.sort(items);
+            Collections.sort(items); //Collections.sort(items, Collections.reverseOrder()); will sort Z - A
             System.out.println("Sorted items:");
             for (String item : items) {
                 System.out.println(item);
